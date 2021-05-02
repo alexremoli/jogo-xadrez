@@ -20,6 +20,36 @@
             qteMovimentos++;
         }
 
+        public bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = movimentosPossiveis();
+            for (int i= 0; i<tab.linhas; i++)
+            {
+                for(int j=0; j<tab.colunas; j++)
+                {
+                    if (mat[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+       /* public bool podeMoverPara(Posicao pos)
+        {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
+        }*/
+        //Essa síntaxe é o mesmo que:
+        public bool podeMoverPara(Posicao pos)
+        {
+           bool[,] mat = new bool[tab.linhas, tab.colunas];
+ 
+           mat = movimentosPossiveis();
+ 
+           return mat[pos.linha, pos.coluna];
+        }
+
         public abstract bool[,] movimentosPossiveis();
     }
 }
