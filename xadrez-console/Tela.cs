@@ -15,6 +15,11 @@ namespace xadrez_console
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            Console.WriteLine();
+            if (partida.xeque)
+            {
+                Console.WriteLine("A " + partida.jogadorAtual + " está em XEQUE!"  );
+            }
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
