@@ -45,7 +45,7 @@
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }*/
         //Essa síntaxe é o mesmo que:
-        public bool podeMoverPara(Posicao pos)
+        public bool movimentoPossivel(Posicao pos)
         {
            bool[,] mat = new bool[tab.linhas, tab.colunas];
  
